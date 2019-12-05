@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Unsigned Data Fields</title>
+        <link rel="stylesheet" type="text/css" href="../payment.css"/>
+    </head>
+
+    <body>
+        <span id="payment_tokenization">
+        <form id="payment_confirmation" action="https://testsecureacceptance.cybersource.com/silent/embedded/pay" method="post"/>
+            <fieldset id="payment_confirmation">
+                <legend>Signed Data Fields</legend>
+                    These fields have been signed on your server, and a signature has been generated.  This will <br> detect tampering with these values as they pass through the consumers browser to the SASOP endpoint.<BR></BR>
+                <div>
+                    <% params.each do |pair|
+                    next if pair[0] == "post_url" || pair[0] == "submit" || pair[1].length == 0
+                    %>
+                        <span class="fieldName"><%= pair[0] %>:</span><span class="fieldValue"><%= pair[1] %></span> <br/>
+                    <% end %>
+                </div>
+            </fieldset>
+            <% params.each do |pair| %>
+                <input type="hidden" name="<%= pair[0] %>" value="<%= pair[1] %>"/>
+            <% end %>
+            <input type="submit" id="submit" value="Confirm "/>
+            <script type="text/javascript" src="../jquery-1.7.min.js"></script>
+        </form>
+    </body>
+</html>

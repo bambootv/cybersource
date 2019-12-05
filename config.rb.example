@@ -1,0 +1,7 @@
+module Config
+	KEY = {
+		'access_key' => 'REPLACE_WITH_ACCESS_KEY',
+		'profile_id' => 'REPLACE_WITH_PROFILE_ID',
+		'secret_key' => 'REPLACE_WITH_SECRET_KEY'
+	}
+end
