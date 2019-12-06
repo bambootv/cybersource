@@ -10,6 +10,7 @@ Instructions to send request to CyberSource to perform electronic payment.
 4. [Getting Started](#getting_started)
 5. [Data For Test](#data_for_test)
 6. [Note](#note)
+7. [Makefile](#makefile)
 
 ## Related Documents
 * [Secure_Acceptance_Checkout_API](http://apps.cybersource.com/library/documentation/dev_guides/Secure_Acceptance_Checkout_API/Secure_Acceptance_Checkout_API.pdf)
@@ -59,3 +60,9 @@ Instructions to send request to CyberSource to perform electronic payment.
 
 ## Note
 * Depending on the value of the card, request will redirect to 3D Secure screen or customer response page
+
+## Makefile
+If your OS is Linux or Mac, let use Makefile
+* `make dev`
+* `make build`
+* `make run`
