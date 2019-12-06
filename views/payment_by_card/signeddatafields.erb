@@ -26,15 +26,19 @@
                     <span>bill_to_forename:</span><input type="text" name="bill_to_forename"><br/>
                     <span>bill_to_surname:</span><input type="text" name="bill_to_surname"><br/>
                     <span>bill_to_email:</span><input type="text" name="bill_to_email"><br/>
-                    <span>bill_to_phone:</span><input type="text" name="bill_to_phone"><br/>
+                    <span>bill_to_phone:</span><input type="text" name="bill_to_phone"><br/> <%# Customer phone number. CyberSource recommends that you include the country code if the order is from outside the U.S. # Note This field is optional for card payments. For eCheck payments this field is required if your processor is CyberSource ACH Service or Telecheck. %>
                     <span>bill_to_address_line1:</span><input type="text" name="bill_to_address_line1"><br/>
                     <span>bill_to_address_city:</span><input type="text" name="bill_to_address_city"><br/>
-                    <span>bill_to_address_state:</span><input type="text" name="bill_to_address_state"><br/>
-                    <span>bill_to_address_country:</span><input type="text" name="bill_to_address_country"><br/>
+                    <span>bill_to_address_state:</span><input type="text" name="bill_to_address_state"><br/> <%# State or province in the billing address. Use the two-character ISO state and province code. # Note: This field is required for U.S. and Canada %>
+                    <span>bill_to_address_country:</span><input type="text" name="bill_to_address_country"><br/> <%# ISO Standard Country Codes: Vietnam -> VN, United States -> US %>
                     <span>bill_to_address_postal_code:</span><input type="text" name="bill_to_address_postal_code"><br/>
                 </div>
             </fieldset>
-            <input type="submit" id="submit" name="submit" value="Submit"/>
+            <form>
+                <input type="radio" name="transaction_type" id="create_payment_token"> create_payment_token<br>
+                <input type="radio" name="transaction_type" id="sale,create_payment_token" checked> create_payment_token and sale<br>
+            </form>
+            <input type="submit" id="submit" form="payment_form" name="submit" value="Submit"/>
             <script type="text/javascript" src="../payment_form.js"></script>
         </form>
     </body>

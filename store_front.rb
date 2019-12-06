@@ -5,7 +5,11 @@ require_relative 'config'
 
 include ERB::Util
 
-#set :erubis, :escape_html => true
+# set :erubis, :escape_html => true
+
+get '/' do
+	erb :'index'
+end
 
 get '/paymentbycard' do
 	@access_key = Config::KEY['access_key']
