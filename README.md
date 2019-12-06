@@ -28,6 +28,7 @@ Instructions to send request to CyberSource to perform electronic payment.
 
 ## Getting Started
 * Update key
+
     Get key in the [Business Center](https://ebc2test.cybersource.com/ebc2/app/PaymentConfiguration/SecureAcceptanceSettings)
     ```
     cp config.rb.example config.rb
@@ -35,9 +36,9 @@ Instructions to send request to CyberSource to perform electronic payment.
 
 * Build and run with docker
     ```
-    cd ~/intergration_cybersource_ruby
+    cd <project_path>
     docker build -t ruby_thin .
-    docker run -v ~/intergration_cybersource_ruby:/my_app -p 3001:3001 -it ruby_thin /bin/bash
+    docker run -v `pwd`:/my_app -p 3001:3001 -it ruby_thin /bin/bash
     ```
 
 * On brower
