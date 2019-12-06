@@ -53,7 +53,7 @@ function setDefaultsForPaymentDetailsSection() {
 
     if ($('#payment_tokenization').length > 0) {
         $("input[name='transaction_type']").val("authorization");
-        $("input[name='payment_token']").val("5755201985586137003002");
+        $("input[name='payment_token']").val("Paste your payment token here");
     } else {
         $("input[name='transaction_type']").val("sale,create_payment_token");
         $("input[name='payment_method']").val("card");
